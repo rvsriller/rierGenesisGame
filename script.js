@@ -9,17 +9,19 @@ let score = 0;
 3 - blau (azul)
 */
 
-//Find grids in html code
-const blau = document.querySelector('.blau');
-const rot = document.querySelector('.rot');
-const grun = document.querySelector('.grun');
-const gelb = document.querySelector('.gelb');
+//Finding HTML elements (grids) by classes
+let blau = document.querySelector('.blau');
+let rot = document.querySelector('.rot');
+let grun = document.querySelector('.grun');
+let gelb = document.querySelector('.gelb');
 
 
 
 //create an order of colors to present in game
 let shuffleOrder = () => {
+    //Generating numbers between 0 and 3
     let colorOrder = Math.floor(Math.random() * 4);
+    
     order[order.length] = colorOrder; //size of vector equal to number generated
     clickedOrder = [];
     
@@ -27,23 +29,23 @@ let shuffleOrder = () => {
 
     for (let i in order){
         let elementColor = createColorElement(order[i]);
-        lightColor(elementColor, Number(i) + 1) //take a number + one to existis in list of colors
+        lightColorOn(elementColor, Number(i) + 1) //take a number + one to existis in list of colors
     }
 }
 
 
 
 //light color ON - generate
-let lightColor = (element, number) => {
-    number = number * 500;
+let lightColorOn = (elementColor, tempo) => {
+    tempo = tempo * 500;
     setTimeout(() => {
-        element.classList.add('selected');
-    }, number -250);
+        elementColor.classList.add('selected');
+    }, tempo -250);
 
     //turn off
     setTimeout(() => {
-        element.classList.remove('selected');
-    })
+        elementColor.classList.remove('selected');
+    }, tempo);
 
 }
 
@@ -66,7 +68,7 @@ let checkOrder = () => {
 
 //Verifying if all clicks of player are equal to game colors
 let click = (color) => {
-    clickOrder[clickedOrder.length] = color;
+    clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
 
     setTimeout(() => {
@@ -100,7 +102,8 @@ let nextLevel = () => {
 
 //Game over function
 let gameOver = () => {
-    alert(`Pontuação: ${score}!\n Você perdeu o jogo \n Clique em OK para iniciar novo jogo`);
+    alert(` VOCÊ PERDEU O JOGO \n Pontuação: ${score}! \n Clique em OK para iniciar novo jogo`);
+    
     order = [];
     clickedOrder = [];
     //after reset all parameters, it can starts a new game
