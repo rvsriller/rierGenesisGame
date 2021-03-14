@@ -58,7 +58,7 @@ let checkOrder = () => {
     }
 
     if(clickedOrder.length == order.length){
-        alert(`Pontuação: ${score}\n Você acertou! Iniciando próximo nível`);
+        alert(`Pontuação: ${score}\n Você acertou! \n Iniciando próximo nível!`);
         nextLevel();
     }
 }
@@ -110,7 +110,7 @@ let gameOver = () => {
 
 //reset level and start game
 let playGame = () => {
-    alert('Bem vindo ao Gênesis. \n Iniciando novo jogo!');
+    alert('Bem vindo ao Gênesis. \n Vamos iniciar um novo jogo!');
     score = 0;
 
     nextLevel();

@@ -25,25 +25,25 @@ body {
 
 .blau {
   grid-area: blau;
-  background-color: blue;
+  background-color: #4646ee;
   border-bottom-right-radius: 100%;
 }
 
 .rot {
   grid-area: rot;
-  background-color: red;
+  background-color: #f14848;
   border-top-right-radius: 100%;
 }
 
 .gelb {
   grid-area: gelb;
-  background-color: yellow;
+  background-color: #f1f150;
   border-bottom-left-radius: 100%;
 }
 
 .grun {
   grid-area: grun;
-  background-color: green;
+  background-color: #5dee5d;
   border-top-left-radius: 100%;
 }
 
