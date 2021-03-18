@@ -12,8 +12,8 @@ You can go to my github [page](https://rvsriller.github.io/rierGeniusGame/) and 
 
 # Tecnologies
 
-- HTML 5
-- CSS 3
-- Javascript ES 6
+- HTML5
+- CSS3
+- Javascript ES6
 
 This lesson was presented by [Gabriela Pinhero](https://github.com/SpruceGabriela)
