@@ -113,7 +113,7 @@ let gameOver = () => {
 
 //reset level and start game
 let playGame = () => {
-    alert('Bem vindo ao Gênesis. \n Vamos iniciar um novo jogo!');
+    alert('Bem vindo ao Genius Game. \n Vamos iniciar um novo jogo!');
     score = 0;
 
     nextLevel();
